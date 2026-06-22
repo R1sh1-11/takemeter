@@ -158,4 +158,6 @@ The place I diverged from the spec was data collection. The spec assumed manual 
 
 ## Demo Video
 
-[Watch the demo](https://www.loom.com/share/5328c7f9f56649b6b088801222144622)
+> **Loom video link:** *(https://www.loom.com/share/5328c7f9f56649b6b088801222144622)*
+
+---
