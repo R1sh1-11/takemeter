@@ -155,3 +155,7 @@ The place I diverged from the spec was data collection. The spec assumed manual 
 * **Label stress-testing:** I gave Claude my three label definitions and asked it to generate boundary cases between technical and news. Several generated examples (like a post sharing a breach link with one sentence of commentary) were genuinely hard to classify and led me to tighten the edge case rule to focus on whether the analysis "stands on its own without the link."
 * **Annotation assistance:** I used `llama-3.1-8b-instant` via Groq to pre-label all 396 collected posts using the label definitions from `planning.md`. The model returned errors on roughly 200 posts (it was outputting explanations instead of just the label name). I rewrote the prompt to be more explicit about output format, reran it, and then reviewed all 194 successfully labeled posts manually. I corrected roughly 15-20 labels where the model got it wrong, particularly on posts that mentioned technical tools but were ultimately asking career questions.
 * **Failure analysis:** After fine-tuning I pasted my misclassified examples into Claude and asked it to identify patterns. It correctly identified that technical vocabulary in news headlines was the main confounding signal. I verified this by re-reading all 8 news-predicted-as-technical examples and confirmed that 7 of the 8 had specific tool names, version numbers, or vulnerability terminology in the title even though the body was empty or just a link.
+
+## Demo Video
+
+[Watch the demo]([https://www.loom.com/share/5328c7f9f56649b6b088801222144622])
